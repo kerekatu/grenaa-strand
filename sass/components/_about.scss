@@ -1,0 +1,12 @@
+.about {
+  width: 80rem;
+
+  &__map {
+    width: 100%;
+    height: 40rem;
+
+    @include respond(tab-land) {
+      max-width: 100%;
+    }
+  }
+}

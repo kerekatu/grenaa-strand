@@ -1,0 +1,30 @@
+body {
+  font-family: $font-family;
+  font-size: $default-font-size;
+  font-weight: $default-font-weight;
+  line-height: $default-line-height;
+}
+
+.heading-1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.heading-2 {
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: $color-gray;
+}
+
+.heading-3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.highlight {
+  font-weight: 700;
+}
+
+.paragraph {
+  hyphens: auto;
+}

@@ -1,0 +1,21 @@
+.info {
+  margin-top: 8rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  grid-gap: 3rem;
+}
+
+.cards__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $color-gray-light;
+  color: $color-gray;
+  padding: 2rem;
+  font-size: 1.6rem;
+  border-radius: 0.4rem;
+}

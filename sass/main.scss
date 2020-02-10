@@ -1,0 +1,21 @@
+/* ABSTRACTS */
+
+@import "./abstracts/mixins";
+@import "./abstracts/variables";
+
+/* BASE */
+
+@import "./base/base";
+@import "./base/typography";
+@import "./base/utilities";
+
+/* COMPONENTS */
+
+@import "./components/about";
+@import "./components/footer";
+@import "./components/header";
+@import "./components//info";
+
+/* PAGES */
+
+@import "./pages/home";

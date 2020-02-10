@@ -1,0 +1,22 @@
+/* GRID */
+
+.wrapper {
+  display: grid;
+  grid-template-rows: [header] 100vh [main-content] 1fr [footer] min-content;
+  min-height: 100vh;
+}
+
+.header {
+  grid-row: header;
+  padding: 5rem 10rem;
+}
+
+.main-content {
+  grid-row: main-content;
+  padding: 5rem 10rem;
+}
+
+.footer {
+  grid-row: footer;
+  padding: 5rem 10rem;
+}
