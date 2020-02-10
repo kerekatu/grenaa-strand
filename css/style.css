@@ -91,6 +91,9 @@ body {
 /* COMPONENTS */
 .about {
   width: 80rem; }
+  @media only screen and (max-width: 56.25em) {
+    .about {
+      width: 100%; } }
   .about__map {
     width: 100%;
     height: 40rem; }
@@ -100,14 +103,26 @@ body {
 
 .footer__text {
   font-weight: 700; }
+  @media only screen and (max-width: 56.25em) {
+    .footer__text {
+      text-align: center; } }
 
 .header {
+  position: relative; }
+
+.header-container {
   display: grid;
   grid-template-columns: max-content 1fr;
-  grid-template-rows: min-content min-content;
-  align-items: center;
-  position: relative;
-  color: #fff; }
+  align-items: baseline;
+  color: #fff;
+  padding: 5rem 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header-container {
+      grid-template-columns: 1fr;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 5rem 5rem; } }
 
 .logo {
   font-size: 3.2rem;
@@ -116,12 +131,19 @@ body {
   line-height: 1;
   margin-right: auto;
   text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 37.5em) {
+    .logo {
+      margin-right: 0;
+      margin-bottom: 4rem; } }
 
 .navbar__list {
   display: flex;
   justify-content: flex-end; }
+  @media only screen and (max-width: 37.5em) {
+    .navbar__list {
+      justify-content: center; } }
 
-.navbar__item {
+.navbar__item:not(:first-child) {
   margin-left: 4rem; }
 
 .navbar__link {
@@ -139,6 +161,9 @@ body {
   height: 100vh;
   user-select: none;
   pointer-events: none; }
+  @media only screen and (max-width: 37.5em) {
+    .bg-slider {
+      height: 50vh; } }
   .bg-slider__img {
     width: inherit;
     height: inherit;
@@ -172,15 +197,23 @@ body {
   display: grid;
   grid-template-rows: [header] 100vh [main-content] 1fr [footer] min-content;
   min-height: 100vh; }
+  @media only screen and (max-width: 37.5em) {
+    .wrapper {
+      grid-template-rows: [header] 50vh [main-content] 1fr [footer] min-content; } }
 
 .header {
-  grid-row: header;
-  padding: 5rem 10rem; }
+  grid-row: header; }
 
 .main-content {
   grid-row: main-content;
   padding: 5rem 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .main-content {
+      padding: 5rem 5rem; } }
 
 .footer {
   grid-row: footer;
   padding: 5rem 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      padding: 5rem 5rem; } }

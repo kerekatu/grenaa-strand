@@ -4,19 +4,30 @@
   display: grid;
   grid-template-rows: [header] 100vh [main-content] 1fr [footer] min-content;
   min-height: 100vh;
+
+  @include respond(phone) {
+    grid-template-rows: [header] 50vh [main-content] 1fr [footer] min-content;
+  }
 }
 
 .header {
   grid-row: header;
-  padding: 5rem 10rem;
 }
 
 .main-content {
   grid-row: main-content;
   padding: 5rem 10rem;
+
+  @include respond(phone) {
+    padding: 5rem 5rem;
+  }
 }
 
 .footer {
   grid-row: footer;
   padding: 5rem 10rem;
+
+  @include respond(phone) {
+    padding: 5rem 5rem;
+  }
 }

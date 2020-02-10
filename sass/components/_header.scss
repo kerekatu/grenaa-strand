@@ -1,10 +1,21 @@
 .header {
+  position: relative;
+}
+
+.header-container {
   display: grid;
   grid-template-columns: max-content 1fr;
-  grid-template-rows: min-content min-content;
-  align-items: center;
-  position: relative;
+  align-items: baseline;
   color: $color-white;
+  padding: 5rem 10rem;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 5rem 5rem;
+  }
 }
 
 .logo {
@@ -14,16 +25,27 @@
   line-height: 1;
   margin-right: auto;
   text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+
+  @include respond(phone) {
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
 }
 
 .navbar {
   &__list {
     display: flex;
     justify-content: flex-end;
+
+    @include respond(phone) {
+      justify-content: center;
+    }
   }
 
   &__item {
-    margin-left: 4rem;
+    &:not(:first-child) {
+      margin-left: 4rem;
+    }
   }
 
   &__link {
@@ -43,6 +65,10 @@
   height: 100vh;
   user-select: none;
   pointer-events: none;
+
+  @include respond(phone) {
+    height: 50vh;
+  }
 
   &__img {
     width: inherit;
